@@ -36,6 +36,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0344-reverse-string](https://github.com/RanjanChauhan08/LeetCode/tree/master/0344-reverse-string) |
 ## Design
 |  |
 | ------- |
@@ -48,4 +49,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/RanjanChauhan08/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
+## Two Pointers
+|  |
+| ------- |
+| [0344-reverse-string](https://github.com/RanjanChauhan08/LeetCode/tree/master/0344-reverse-string) |
 <!---LeetCode Topics End-->
