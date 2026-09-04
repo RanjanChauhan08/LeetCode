@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/RanjanChauhan08/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0700-search-in-a-binary-search-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0700-search-in-a-binary-search-tree) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 ## Depth-First Search
 |  |
@@ -31,6 +32,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/RanjanChauhan08/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0700-search-in-a-binary-search-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0700-search-in-a-binary-search-tree) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 ## String
 |  |
@@ -53,4 +55,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0344-reverse-string](https://github.com/RanjanChauhan08/LeetCode/tree/master/0344-reverse-string) |
+## Binary Search Tree
+|  |
+| ------- |
+| [0700-search-in-a-binary-search-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0700-search-in-a-binary-search-tree) |
 <!---LeetCode Topics End-->
