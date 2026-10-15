@@ -8,19 +8,15 @@
  * }
  */
 class Solution {
-    public TreeNode helper(TreeNode node,int p,int q){
-        if(node==null)return null;
-        if(node.val==p || node.val==q){
-            return node;
-        }
-        TreeNode l=helper(node.left,p,q);
-        TreeNode r=helper(node.right,p,q);
-        if(l==null || r==null){
-            if(l==null)return r;
-            else if(r==null)return l;
-            else return null;
-        }
-        return node;
+    public TreeNode helper(TreeNode root,int p,int q){
+        if(root==null)return null;
+        if(root.val==p || root.val==q)return root;
+        TreeNode l=helper(root.left,p,q);
+        TreeNode r=helper(root.right,p,q);
+        if(l!=null && r!=null)return root;
+        else if(l==null && r==null)return null;
+        else if(r==null)return l;
+        return r;
     }
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         return helper(root,p.val,q.val);
