@@ -1,0 +1,30 @@
+class Solution {
+    public void travel(ArrayList<ArrayList<Integer>> adj,ArrayList<Integer>ans,int[]visited,int a){
+        Queue<Integer>queue=new LinkedList<>();
+        queue.add(a);
+        while(!queue.isEmpty()){
+            int len=queue.size();
+            for(int i=0;i<len;i++){
+                int b=queue.poll();
+                if(visited[b]==1)continue;
+                visited[b]=1;
+                ans.add(b);
+                for(int j=0;j<adj.get(b).size();j++){
+                    int c=adj.get(b).get(j);
+                    if(visited[c]==1)continue;
+                    queue.add(c);
+                }
+            }
+        }
+    }
+    public ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj) {
+        ArrayList<Integer>ans=new ArrayList<>();
+        int[]visited=new int[adj.size()];
+        for(int i=0;i<adj.size();i++){
+            if(visited[i]==0){
+                travel(adj,ans,visited,i);
+            }
+        }
+        return ans;
+    }
+}
