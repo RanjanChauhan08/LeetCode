@@ -19,17 +19,18 @@ class Solution {
         int[]x={0,1,0,-1};
         int[]y={-1,0,1,0};
         image[sr][sc]=color;
+        visited[sr][sc]=1;
         while(!queue.isEmpty()){
             int len=queue.size();
             for(int i=0;i<len;i++){
                 pair p=queue.poll();
-                visited[p.r][p.c]=1;
                 for(int j=0;j<4;j++){
                     int n=x[j]+p.r;
                     int m=y[j]+p.c;
                     if(n>=0 && n<image.length && m>=0 && m<image[0].length && image[n][m]==org && visited[n][m]==0){
                         queue.add(new pair(n,m));
                         image[n][m]=color;
+                        visited[n][m]=1;
                     }
                 }
             }
