@@ -37,6 +37,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/RanjanChauhan08/LeetCode/tree/master/0733-flood-fill) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/1373-maximum-sum-bst-in-binary-tree) |
+| [1559-detect-cycles-in-2d-grid](https://github.com/RanjanChauhan08/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 | [2476-closest-nodes-queries-in-a-binary-search-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/2476-closest-nodes-queries-in-a-binary-search-tree) |
 ## Breadth-First Search
 |  |
@@ -48,6 +49,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/RanjanChauhan08/LeetCode/tree/master/0733-flood-fill) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [0994-rotting-oranges](https://github.com/RanjanChauhan08/LeetCode/tree/master/0994-rotting-oranges) |
+| [1559-detect-cycles-in-2d-grid](https://github.com/RanjanChauhan08/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 ## Sorting
 |  |
 | ------- |
@@ -114,6 +116,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/RanjanChauhan08/LeetCode/tree/master/0733-flood-fill) |
 | [0994-rotting-oranges](https://github.com/RanjanChauhan08/LeetCode/tree/master/0994-rotting-oranges) |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/RanjanChauhan08/LeetCode/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
+| [1559-detect-cycles-in-2d-grid](https://github.com/RanjanChauhan08/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 | [2476-closest-nodes-queries-in-a-binary-search-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/2476-closest-nodes-queries-in-a-binary-search-tree) |
 ## Monotonic Stack
 |  |
@@ -146,6 +149,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0200-number-of-islands](https://github.com/RanjanChauhan08/LeetCode/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/RanjanChauhan08/LeetCode/tree/master/0547-number-of-provinces) |
+| [1559-detect-cycles-in-2d-grid](https://github.com/RanjanChauhan08/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 ## Graph Theory
 |  |
 | ------- |
@@ -156,4 +160,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0200-number-of-islands](https://github.com/RanjanChauhan08/LeetCode/tree/master/0200-number-of-islands) |
 | [0733-flood-fill](https://github.com/RanjanChauhan08/LeetCode/tree/master/0733-flood-fill) |
 | [0994-rotting-oranges](https://github.com/RanjanChauhan08/LeetCode/tree/master/0994-rotting-oranges) |
+| [1559-detect-cycles-in-2d-grid](https://github.com/RanjanChauhan08/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 <!---LeetCode Topics End-->
