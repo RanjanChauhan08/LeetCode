@@ -17,10 +17,8 @@ class Solution {
         int[] dr = {-1, 0, 1, 0};
         int[] dc = {0, 1, 0, -1};
         queue.add(new pair(r,c,-1,-1));
-        int len=0;
         while(!queue.isEmpty()){
             int s=queue.size();
-            len++;
             for(int i=0;i<s;i++){
                 pair p=queue.poll();
                 for(int j=0;j<4;j++){
