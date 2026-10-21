@@ -28,6 +28,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0098-validate-binary-search-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0098-validate-binary-search-tree) |
 | [0099-recover-binary-search-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0099-recover-binary-search-tree) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/RanjanChauhan08/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
+| [0130-surrounded-regions](https://github.com/RanjanChauhan08/LeetCode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/RanjanChauhan08/LeetCode/tree/master/0200-number-of-islands) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
@@ -42,6 +43,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Breadth-First Search
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/RanjanChauhan08/LeetCode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/RanjanChauhan08/LeetCode/tree/master/0200-number-of-islands) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0542-01-matrix](https://github.com/RanjanChauhan08/LeetCode/tree/master/0542-01-matrix) |
@@ -113,6 +115,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/RanjanChauhan08/LeetCode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/RanjanChauhan08/LeetCode/tree/master/0200-number-of-islands) |
 | [0542-01-matrix](https://github.com/RanjanChauhan08/LeetCode/tree/master/0542-01-matrix) |
 | [0733-flood-fill](https://github.com/RanjanChauhan08/LeetCode/tree/master/0733-flood-fill) |
@@ -150,6 +153,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Union-Find
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/RanjanChauhan08/LeetCode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/RanjanChauhan08/LeetCode/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/RanjanChauhan08/LeetCode/tree/master/0547-number-of-provinces) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/RanjanChauhan08/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
@@ -160,6 +164,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Matrix
 |  |
 | ------- |
+| [0130-surrounded-regions](https://github.com/RanjanChauhan08/LeetCode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/RanjanChauhan08/LeetCode/tree/master/0200-number-of-islands) |
 | [0542-01-matrix](https://github.com/RanjanChauhan08/LeetCode/tree/master/0542-01-matrix) |
 | [0733-flood-fill](https://github.com/RanjanChauhan08/LeetCode/tree/master/0733-flood-fill) |
