@@ -1,0 +1,46 @@
+class Solution {
+    public boolean bfs(char[]visited,int x,ArrayList<ArrayList<Integer>>adj){
+        Queue<Integer>queue=new LinkedList<>();
+        queue.add(x);
+        visited[x]='b';
+        while(!queue.isEmpty()){
+            int len=queue.size();
+            for(int i=0;i<len;i++){
+                int a=queue.poll();
+                for(int j=0;j<adj.get(a).size();j++){
+                    if(visited[adj.get(a).get(j)]=='\u0000'){
+                        if(visited[a]=='w')visited[adj.get(a).get(j)]='b';
+                        else visited[adj.get(a).get(j)]='w';
+                        queue.add(adj.get(a).get(j));
+                    }
+                    else if(visited[adj.get(a).get(j)]=='b'){
+                        if(visited[a]=='w')continue;
+                        else return false;
+                    }
+                    else{
+                        if(visited[a]=='b')continue;
+                        else return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+    public boolean isBipartite(int[][] graph) {
+        ArrayList<ArrayList<Integer>>adj=new ArrayList<>();
+        for(int i=0;i<graph.length;i++)adj.add(new ArrayList<>());
+        for(int i=0;i<graph.length;i++){
+            for(int j=0;j<graph[i].length;j++){
+                adj.get(i).add(graph[i][j]);
+                adj.get(graph[i][j]).add(i);
+            }
+        }
+        char[]visited=new char[graph.length];
+        for(int i=0;i<visited.length;i++){
+            if(visited[i]=='\u0000'){
+                if(!bfs(visited,i,adj))return false;
+            }
+        }
+        return true;
+    }
+}
