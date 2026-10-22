@@ -1,28 +1,15 @@
 class Solution {
-    public boolean bfs(char[]visited,int x,ArrayList<ArrayList<Integer>>adj){
-        Queue<Integer>queue=new LinkedList<>();
-        queue.add(x);
-        visited[x]='b';
-        while(!queue.isEmpty()){
-            int len=queue.size();
-            for(int i=0;i<len;i++){
-                int a=queue.poll();
-                for(int j=0;j<adj.get(a).size();j++){
-                    if(visited[adj.get(a).get(j)]=='\u0000'){
-                        if(visited[a]=='w')visited[adj.get(a).get(j)]='b';
-                        else visited[adj.get(a).get(j)]='w';
-                        queue.add(adj.get(a).get(j));
-                    }
-                    else if(visited[adj.get(a).get(j)]=='b'){
-                        if(visited[a]=='w')continue;
-                        else return false;
-                    }
-                    else{
-                        if(visited[a]=='b')continue;
-                        else return false;
-                    }
-                }
+    public boolean dfs(char[]visited,int x,char parent,ArrayList<ArrayList<Integer>>adj){
+        if(parent=='\u0000'){
+            visited[x]='b';
+        }
+        else if(parent=='w')visited[x]='b';
+        else visited[x]='w';
+        for(int j=0;j<adj.get(x).size();j++){
+            if(visited[adj.get(x).get(j)]=='\u0000'){
+                if(!dfs(visited,adj.get(x).get(j),visited[x],adj))return false;
             }
+            else if(visited[adj.get(x).get(j)]==visited[x])return false;
         }
         return true;
     }
@@ -38,7 +25,7 @@ class Solution {
         char[]visited=new char[graph.length];
         for(int i=0;i<visited.length;i++){
             if(visited[i]=='\u0000'){
-                if(!bfs(visited,i,adj))return false;
+                if(!dfs(visited,i,'\u0000',adj))return false;
             }
         }
         return true;
