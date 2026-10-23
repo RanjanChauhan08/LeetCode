@@ -1,16 +1,17 @@
 class Solution {
-    public boolean dfs(ArrayList<ArrayList<Integer>>adj,int[]visited,int[]pathVisited,int a){
+    public boolean dfs(ArrayList<ArrayList<Integer>>adj,int[]visited,int[]pathVisited,List<Integer>ans,int a){
         pathVisited[a]=1;
         visited[a]=1;
         for(int i=0;i<adj.get(a).size();i++){
             int b=adj.get(a).get(i);
             if(visited[b]==0){
-                if(dfs(adj,visited,pathVisited,b))return true;
+                if(dfs(adj,visited,pathVisited,ans,b))return true;
             }
             else if(pathVisited[b]==1){
                 return true;
             }
         }
+        ans.add(a);
         pathVisited[a]=0;
         return false;
     }
@@ -27,15 +28,10 @@ class Solution {
         int[]pathVisited=new int[graph.length];
         for(int i=0;i<visited.length;i++){
             if(visited[i]==0){
-                if(!dfs(adj,visited,pathVisited,i)){
-                    for(int j=0;j<pathVisited.length;j++){
-                        if(pathVisited[j]==1){
-                            ans.add(j);
-                        }
-                    }
-                }
+                dfs(adj,visited,pathVisited,ans,i);
             }
         }
+        Collections.sort(ans);
         return ans;
     }
 }
