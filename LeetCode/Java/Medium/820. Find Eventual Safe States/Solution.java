@@ -1,34 +1,39 @@
 class Solution {
-    public boolean helper(int[][]graph,int[]visited,int[]pathVisited,int node,int[]check){
-        visited[node]=1;
-        pathVisited[node]=1;
-        check[node]=0;
-        for(Integer i:graph[node]){
-            if(visited[i]==0){
-                boolean bt=helper(graph,visited,pathVisited,i,check);
-                if(bt)return true;
+    public boolean dfs(ArrayList<ArrayList<Integer>>adj,int[]visited,int[]pathVisited,int a){
+        pathVisited[a]=1;
+        visited[a]=1;
+        for(int i=0;i<adj.get(a).size();i++){
+            int b=adj.get(a).get(i);
+            if(visited[b]==0){
+                if(dfs(adj,visited,pathVisited,b))return true;
             }
-            else if(pathVisited[i]==1){
+            else if(pathVisited[b]==1){
                 return true;
             }
         }
-        check[node]=1;
-        pathVisited[node]=0;
+        pathVisited[a]=0;
         return false;
     }
     public List<Integer> eventualSafeNodes(int[][] graph) {
+        ArrayList<ArrayList<Integer>>adj=new ArrayList<>();
+        for(int i=0;i<graph.length;i++){
+            adj.add(new ArrayList<>());
+            for(int j=0;j<graph[i].length;j++){
+                adj.get(i).add(graph[i][j]);
+            }
+        }
         List<Integer>ans=new ArrayList<>();
         int[]visited=new int[graph.length];
         int[]pathVisited=new int[graph.length];
-        int[]check=new int[graph.length];
-        for(int i=0;i<graph.length;i++){
+        for(int i=0;i<visited.length;i++){
             if(visited[i]==0){
-                boolean bt=helper(graph,visited,pathVisited,i,check);
-            }
-        }
-        for(int i=0;i<graph.length;i++){
-            if(check[i]==1){
-                ans.add(i);
+                if(!dfs(adj,visited,pathVisited,i)){
+                    for(int j=0;j<visited.length;j++){
+                        if(visited[j]==1){
+                            ans.add(j);
+                        }
+                    }
+                }
             }
         }
         return ans;
