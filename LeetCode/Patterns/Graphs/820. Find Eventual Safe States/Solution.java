@@ -28,8 +28,8 @@ class Solution {
         for(int i=0;i<visited.length;i++){
             if(visited[i]==0){
                 if(!dfs(adj,visited,pathVisited,i)){
-                    for(int j=0;j<visited.length;j++){
-                        if(visited[j]==1){
+                    for(int j=0;j<pathVisited.length;j++){
+                        if(pathVisited[j]==1){
                             ans.add(j);
                         }
                     }
