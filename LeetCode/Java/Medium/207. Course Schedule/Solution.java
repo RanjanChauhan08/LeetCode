@@ -15,7 +15,7 @@ class Solution {
         int n=0;
         while(!queue.isEmpty()){
             int len=queue.size();
-            for(int i=0;i<len;i++{
+            for(int i=0;i<len;i++){
                 int a=queue.poll();
                 n++;
                 for(int j=0;j<adj.get(a).size();j++){
