@@ -1,37 +1,36 @@
 class Solution {
-    public boolean dfs(ArrayList<ArrayList<Integer>>adj,int[]visited,int[]pathVisited,List<Integer>ans,int a){
-        pathVisited[a]=1;
-        visited[a]=1;
-        for(int i=0;i<adj.get(a).size();i++){
-            int b=adj.get(a).get(i);
-            if(visited[b]==0){
-                if(dfs(adj,visited,pathVisited,ans,b))return true;
-            }
-            else if(pathVisited[b]==1){
-                return true;
-            }
-        }
-        ans.add(a);
-        pathVisited[a]=0;
-        return false;
-    }
     public List<Integer> eventualSafeNodes(int[][] graph) {
         ArrayList<ArrayList<Integer>>adj=new ArrayList<>();
+        int[]inorder=new int[graph.length];
+        for(int i=0;i<graph.length;i++)adj.add(new ArrayList<>());
         for(int i=0;i<graph.length;i++){
-            adj.add(new ArrayList<>());
             for(int j=0;j<graph[i].length;j++){
-                adj.get(i).add(graph[i][j]);
+                adj.get(graph[i][j]).add(i);
+                inorder[i]++;
             }
         }
-        List<Integer>ans=new ArrayList<>();
-        int[]visited=new int[graph.length];
-        int[]pathVisited=new int[graph.length];
-        for(int i=0;i<visited.length;i++){
-            if(visited[i]==0){
-                dfs(adj,visited,pathVisited,ans,i);
+        Queue<Integer>queue=new LinkedList<>();
+        for(int i=0;i<inorder.length;i++){
+            if(inorder[i]==0){
+                queue.add(i);
             }
         }
-        Collections.sort(ans);
-        return ans;
+        List<Integer>ls=new ArrayList<>();
+        while(!queue.isEmpty()){
+            int len=queue.size();
+            for(int i=0;i<len;i++){
+                int a=queue.poll();
+                ls.add(a);
+                for(int j=0;j<adj.get(a).size();j++){
+                    int b=adj.get(a).get(j);
+                    inorder[b]--;
+                    if(inorder[b]==0){
+                        queue.add(b);
+                    }
+                }
+            }
+        }
+        Collections.sort(ls);
+        return ls;
     }
 }
