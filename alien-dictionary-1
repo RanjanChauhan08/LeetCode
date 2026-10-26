@@ -1,0 +1,78 @@
+class pair{
+    int in;
+    char val;
+    pair(int in,char val){
+        this.in=in;
+        this.val=val;
+    }
+}
+class Solution {
+    public ArrayList<Character> helper(String st1,String st2){
+        ArrayList<Character>miniAns=new ArrayList<>();
+        char[]ch1=st1.toCharArray();
+        char[]ch2=st2.toCharArray();
+        int a=0;
+        int b=0;
+        while(a<st1.length() && b<st2.length()){
+            if(ch1[a]!=ch2[b]){
+                miniAns.add(ch1[a]);
+                miniAns.add(ch2[b]);
+                return miniAns;
+            }
+            a++;
+            b++;
+        }
+        return miniAns;
+    }
+    public String findOrder(String[] words) {
+        ArrayList<ArrayList<Character>>adj=new ArrayList<>();
+        for (int i = 0; i < 26; i++) {
+            adj.add(new ArrayList<>());
+        }
+        int[]inorder=new int[26];
+        HashSet<Character>hs=new HashSet<>();
+        for (String word : words) {
+            for (char ch : word.toCharArray()) {
+                hs.add(ch);
+            }
+        }
+        for(int i=0;i<words.length-1;i++){
+            ArrayList<Character>miniAns=helper(words[i],words[i+1]);
+            if (miniAns.isEmpty()) {
+                if (words[i].length() > words[i + 1].length()) {
+                    return "";
+                }
+                continue;
+            }
+            char u=miniAns.get(0);
+            char v=miniAns.get(1);
+            if(!adj.get(u-'a').contains(v)){
+                adj.get(u-'a').add(v);
+                inorder[v-'a']++;
+            }
+        }
+        Queue<Character>queue=new LinkedList<>();
+        for (char ch : hs) {
+            if (inorder[ch - 'a'] == 0) {
+                queue.add(ch);
+            }
+        }
+        StringBuilder sb=new StringBuilder();
+        while(!queue.isEmpty()){
+            int len=queue.size();
+            for(int i=0;i<len;i++){
+                char x=queue.poll();
+                sb.append(x);
+                for(int j=0;j<adj.get(x-'a').size();j++){
+                    char y=adj.get(x-'a').get(j);
+                    inorder[y-'a']--;
+                    if(inorder[y-'a']==0){
+                        queue.add(y);
+                    }
+                }
+            }
+        }
+        if(sb.length()==hs.size())return sb.toString();
+        return "";
+    }
+}
