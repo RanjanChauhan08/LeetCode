@@ -1,0 +1,82 @@
+class pair{
+    String str;
+    int step;
+    pair(String str,int step){
+        this.str=str;
+        this.step=step;
+    }
+}
+class Solution {
+    public void helper(List<List<String>>ans,ArrayList<String>miniAns,HashMap<String,Integer>map,String word,HashSet<String> wordList){
+        if(map.get(word)==0){
+            ArrayList<String>temp=new ArrayList<>(miniAns);
+            Collections.reverse(temp);
+            ans.add(new ArrayList<>(temp));
+            return;
+        }
+        for(int i=0;i<word.length();i++){
+            for(char ch='a';ch<='z';ch++){
+                String newStr="";
+                if (word.charAt(i) == ch) continue;
+                if(i==0){
+                    newStr=newStr+ch+word.substring(1);
+                }
+                else{
+                    newStr=newStr+word.substring(0,i)+ch+word.substring(i+1);
+                }
+                if(wordList.contains(newStr) && map.containsKey(newStr) && map.get(newStr)+1==map.get(word)){
+                    miniAns.add(newStr);
+                    helper(ans,miniAns,map,newStr,wordList);
+                    miniAns.remove(miniAns.size()-1);
+                }
+            }
+        }
+    }
+    public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
+        HashMap<String,Integer>map=new HashMap<>();
+        HashSet<String>set=new HashSet<>();
+        for(String str:wordList)set.add(str);
+        List<List<String>>ans=new ArrayList<>();
+        Queue<pair>queue=new LinkedList<>();
+        queue.add(new pair(beginWord,0));
+        map.put(beginWord,0);
+        if(set.contains(beginWord)){
+            set.remove(beginWord);
+        }
+        while(!queue.isEmpty()){
+            int len=queue.size();
+            for(int i=0;i<len;i++){
+                pair p=queue.poll();
+                String str=p.str;
+                int step=p.step;
+                map.put(str,step);
+                for(int x=0;x<str.length();x++){
+                    for(char ch='a';ch<='z';ch++){
+                        String newStr="";
+                        if (str.charAt(x) == ch) continue;
+                        if(x==0){
+                            newStr=newStr+ch+str.substring(1);
+                        }
+                        else{
+                            newStr=newStr+str.substring(0,x)+ch+str.substring(x+1);
+                        }
+                        if(set.contains(newStr)){
+                            set.remove(newStr);
+                            map.put(newStr,step+1);
+                            queue.add(new pair(newStr,step+1));
+                        }
+                    }
+                }
+            }
+        }
+        ArrayList<String>miniAns=new ArrayList<>();
+        miniAns.add(endWord);
+        for(String str:wordList)set.add(str);
+        set.add(beginWord);
+        if (!map.containsKey(endWord)) {
+            return ans;
+        }
+        helper(ans,miniAns,map,endWord,set);
+        return ans;
+    }
+}
