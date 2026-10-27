@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0126-word-ladder-ii](https://github.com/RanjanChauhan08/LeetCode/tree/master/0126-word-ladder-ii) |
 | [0127-word-ladder](https://github.com/RanjanChauhan08/LeetCode/tree/master/0127-word-ladder) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/RanjanChauhan08/LeetCode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
@@ -49,6 +50,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Breadth-First Search
 |  |
 | ------- |
+| [0126-word-ladder-ii](https://github.com/RanjanChauhan08/LeetCode/tree/master/0126-word-ladder-ii) |
 | [0127-word-ladder](https://github.com/RanjanChauhan08/LeetCode/tree/master/0127-word-ladder) |
 | [0130-surrounded-regions](https://github.com/RanjanChauhan08/LeetCode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/RanjanChauhan08/LeetCode/tree/master/0200-number-of-islands) |
@@ -88,6 +90,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0126-word-ladder-ii](https://github.com/RanjanChauhan08/LeetCode/tree/master/0126-word-ladder-ii) |
 | [0127-word-ladder](https://github.com/RanjanChauhan08/LeetCode/tree/master/0127-word-ladder) |
 | [0151-reverse-words-in-a-string](https://github.com/RanjanChauhan08/LeetCode/tree/master/0151-reverse-words-in-a-string) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0297-serialize-and-deserialize-binary-tree) |
@@ -220,5 +223,10 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bidirectional Search
 |  |
 | ------- |
+| [0126-word-ladder-ii](https://github.com/RanjanChauhan08/LeetCode/tree/master/0126-word-ladder-ii) |
 | [0127-word-ladder](https://github.com/RanjanChauhan08/LeetCode/tree/master/0127-word-ladder) |
+## Backtracking
+|  |
+| ------- |
+| [0126-word-ladder-ii](https://github.com/RanjanChauhan08/LeetCode/tree/master/0126-word-ladder-ii) |
 <!---LeetCode Topics End-->
