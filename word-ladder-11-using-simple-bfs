@@ -1,0 +1,50 @@
+class Solution {
+    public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
+        HashSet<String>set=new HashSet<>();
+        for(String str:wordList)set.add(str);
+        List<List<String>>ans=new ArrayList<>();
+        Queue<ArrayList<String>>queue=new LinkedList<>();
+        ArrayList<String>start=new ArrayList<>();
+        start.add(beginWord);
+        queue.add(start);
+        if(set.contains(beginWord))set.remove(beginWord);
+        while(!queue.isEmpty()){
+            int len=queue.size();
+            HashSet<String>temp=new HashSet<>();
+            for(int i=0;i<len;i++){
+                ArrayList<String>arr=queue.poll();
+                String str=arr.get(arr.size()-1);
+                if(str.equals(endWord)){
+                    if(ans.isEmpty()){
+                        ans.add(new ArrayList<>(arr));
+                    }
+                    else if(ans.get(0).size()>=arr.size()){
+                        ans.add(new ArrayList<>(arr));
+                    }
+                    temp.add(endWord);
+                }
+                else{
+                    for(int x=0;x<str.length();x++){
+                        for(char ch='a';ch<='z';ch++){
+                            String newStr="";
+                            if(x==0){
+                                newStr=newStr+ch+str.substring(1);
+                            }
+                            else{
+                                newStr=newStr+str.substring(0,x)+ch+str.substring(x+1);
+                            }
+                            if(set.contains(newStr)){
+                                temp.add(newStr);
+                                ArrayList<String>t=new ArrayList<>(arr);
+                                t.add(newStr);
+                                queue.add(t);
+                            }
+                        }
+                    }
+                }
+            }
+            for(String stri:temp)set.remove(stri);
+        }
+        return ans;
+    }
+}
