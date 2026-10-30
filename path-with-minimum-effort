@@ -1,0 +1,51 @@
+import java.util.List;
+import java.util.*;
+class pair{
+    int r;
+    int c;
+    int dif;
+    pair(int r,int c,int dif){
+        this.r=r;
+        this.c=c;
+        this.dif=dif;
+    }
+}
+public class Solution {
+    public static int minimumTimeTakingPath(int[][] heights){
+        int[][]dist=new int[heights.length][heights[0].length];
+        int[]dr={0,1,0,-1};
+        int[]dc={-1,0,1,0};
+        for(int i=0;i<dist.length;i++){
+            for(int j=0;j<dist[0].length;j++){
+                dist[i][j]=10000000;
+            }
+        }
+        dist[0][0]=0;
+        TreeSet<pair>queue=new TreeSet<>((a,b)->{
+            if(a.dif!=b.dif)return a.dif-b.dif;
+            else if(a.r!=b.r)return a.r-b.r;
+            else return a.c-b.c;
+        });
+        queue.add(new pair(0,0,0));
+        while(!queue.isEmpty()){
+            pair p=queue.pollFirst();
+            for(int i=0;i<4;i++){
+                int nr=p.r+dr[i];
+                int nc=p.c+dc[i];
+                if(nr<0 || nr>=dist.length || nc<0 || nc>=dist[0].length)continue;
+                int diff=Math.abs(heights[nr][nc]-heights[p.r][p.c]);
+                int m=Math.max(diff,p.dif);
+                if(dist[nr][nc]>m){
+                    if(dist[nr][nc]!=10000000){
+                        pair np=new pair(nr,nc,dist[nr][nc]);
+                        queue.remove(np);
+                    }
+                    pair mp=new pair(nr,nc,m);
+                    dist[nr][nc]=m;
+                    queue.add(mp);
+                }
+            }
+        }
+        return dist[dist.length-1][dist[0].length-1];
+    }
+}
