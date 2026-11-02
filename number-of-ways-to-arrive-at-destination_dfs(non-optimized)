@@ -1,0 +1,64 @@
+class pair{
+    int node;
+    int dist;
+    pair(int node,int dist){
+        this.node=node;
+        this.dist=dist;
+    }
+}
+class Solution {
+    public void dfs(ArrayList<ArrayList<pair>>adj,int[]dis,int[]ways,int a,int s,int n,int d){
+        if(a==n && s==d){
+            ways[0]++;
+            return;
+        }
+        for(int i=0;i<adj.get(a).size();i++){
+            pair p=adj.get(a).get(i);
+            int newNode=p.node;
+            int newDist=p.dist;
+            if(dis[newNode]>=newDist+d){
+                dfs(adj,dis,ways,newNode,s,n,newDist+d);
+            }
+        }
+    }
+    public int countPaths(int n, int[][] roads) {
+        TreeSet<pair>set=new TreeSet<>((a,b)->{
+            if(a.dist!=b.dist){
+                return Math.abs(a.dist-b.dist);
+            }
+            return Math.abs(a.node-b.node);
+        });
+        ArrayList<ArrayList<pair>>adj=new ArrayList<>();
+        for(int i=0;i<n;i++)adj.add(new ArrayList<>());
+        for(int i=0;i<roads.length;i++){
+            int u=roads[i][0];
+            int v=roads[i][1];
+            int d=roads[i][2];
+            adj.get(u).add(new pair(v,d));
+            adj.get(v).add(new pair(u,d));
+        }
+        int[]dis=new int[n];
+        for(int i=0;i<n;i++)dis[i]=10000000;
+        dis[0]=0;
+        set.add(new pair(0,0));
+        while(!set.isEmpty()){
+            pair p=set.pollFirst();
+            for(int i=0;i<adj.get(p.node).size();i++){
+                int newNode=adj.get(p.node).get(i).node;
+                int newDist=adj.get(p.node).get(i).dist;
+                if(dis[newNode]<=newDist+p.dist)continue;
+                if(dis[newNode]>newDist+p.dist && dis[newNode]!=10000000){
+                    pair rp=new pair(newNode,dis[newNode]);
+                    set.remove(rp);
+                }
+                dis[newNode]=newDist+p.dist;
+                pair newp=new pair(newNode,dis[newNode]);
+                set.add(newp);
+            }
+        }
+        int s=dis[n-1];
+        int[]ways={0};
+        dfs(adj,dis,ways,0,s,n-1,0);
+        return ways[0];
+    }
+}
