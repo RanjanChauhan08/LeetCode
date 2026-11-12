@@ -1,0 +1,90 @@
+
+class DisjointSet {
+    
+    int[] parent;
+    int[] size;
+
+    // Constructor
+    DisjointSet(int n) {
+        parent = new int[n + 1];
+        size = new int[n + 1];
+
+        // Initially, every node is its own parent
+        for (int i = 0; i <= n; i++) {
+            parent[i] = i;
+            size[i] = 1;
+        }
+    }
+
+    // Find parent with Path Compression
+    int findUPar(int node) {
+        if (node == parent[node]) {
+            return node;
+        }
+
+        return parent[node] = findUPar(parent[node]);
+    }
+
+    // Union by Size
+    void unionBySize(int u, int v) {
+        
+        int ulp_u = findUPar(u);
+        int ulp_v = findUPar(v);
+
+        // Already in the same component
+        if (ulp_u == ulp_v) {
+            return;
+        }
+
+        // Attach smaller component to larger component
+        if (size[ulp_u] < size[ulp_v]) {
+            parent[ulp_u] = ulp_v;
+            size[ulp_v] += size[ulp_u];
+        }
+        else {
+            parent[ulp_v] = ulp_u;
+            size[ulp_u] += size[ulp_v];
+        }
+    }
+    
+    // Check if two nodes belong to the same component
+    boolean sameComponent(int u, int v) {
+        return findUPar(u) == findUPar(v);
+    }
+    
+    // Get component size
+    int getSize(int node) {
+        return size[findUPar(node)];
+    }
+}
+public class Solution {
+    public static int[] numOfIslandsII(int n, int m, int[][] q) {
+        DisjointSet ds=new DisjointSet(n*m);
+        int[][]island=new int[n][m];
+        int[]ans=new int[q.length];
+        int[]dx={0,1,0,-1};
+        int[]dy={-1,0,1,0};
+        int comp=0;
+        for(int i=0;i<q.length;i++){
+            int x=q[i][0];
+            int y=q[i][1];
+            if(island[x][y]==1){
+                ans[i]=comp;
+                continue;
+            }
+            comp++;
+            island[x][y]=1;
+            for(int a=0;a<4;a++){
+                int nx=dx[a]+x;
+                int ny=dy[a]+y;
+                if(nx<0 || nx>=n || ny<0 || ny>=m || island[nx][ny]==0)continue;
+                if(ds.findUPar((x*m)+y)!=ds.findUPar((nx*m)+ny)){
+                    ds.unionBySize((x*m)+y,(nx*m)+ny);
+                    comp--;
+                }
+            }
+            ans[i]=comp;
+        }
+        return ans;
+    }
+}
