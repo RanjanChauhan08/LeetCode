@@ -1,0 +1,51 @@
+import java.util.*;
+class Solution {
+    public void dfs1(ArrayList<ArrayList<Integer>>adj,int[]visited,int node,Stack<Integer>st){
+        visited[node]=1;
+        for(int i=0;i<adj.get(node).size();i++){
+            int newNode=adj.get(node).get(i);
+            if(visited[newNode]==1)continue;
+            dfs1(adj,visited,newNode,st);
+        }
+        st.push(node);
+    }
+    public void dfs2(ArrayList<ArrayList<Integer>>adj,ArrayList<Integer>miniAns,int node,int[]visited){
+        visited[node]=1;
+        miniAns.add(node);
+        for(int i=0;i<adj.get(node).size();i++){
+            int newNode=adj.get(node).get(i);
+            if(visited[newNode]==1)continue;
+            dfs2(adj,miniAns,newNode,visited);
+        }
+    }
+    public ArrayList<ArrayList<Integer>> findSCC(ArrayList<ArrayList<Integer>> adj) {
+        Stack<Integer>st=new Stack<>();
+        int[]visited=new int[adj.size()];
+        for(int i=0;i<visited.length;i++){
+            if(visited[i]==0){
+                dfs1(adj,visited,i,st);
+            }
+        }
+        ArrayList<ArrayList<Integer>>revAdj=new ArrayList<>();
+        for(int i=0;i<adj.size();i++)revAdj.add(new ArrayList<>());
+        for(int i=0;i<adj.size();i++){
+            for(int j=0;j<adj.get(i).size();j++){
+                int u=i;
+                int v=adj.get(i).get(j);
+                revAdj.get(v).add(u);
+            }
+        }
+        ArrayList<ArrayList<Integer>>ans=new ArrayList<>();
+        for(int i=0;i<visited.length;i++)visited[i]=0;
+        while(!st.isEmpty()){
+            int node=st.pop();
+            if(visited[node]==1)continue;
+            ArrayList<Integer>miniAns=new ArrayList<>();
+            dfs2(revAdj,miniAns,node,visited);
+            Collections.sort(miniAns);
+            ans.add(miniAns);
+        }
+        ans.sort((a, b) -> Integer.compare(a.get(0), b.get(0)));
+        return ans;
+    }
+}
