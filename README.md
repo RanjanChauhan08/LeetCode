@@ -26,6 +26,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/RanjanChauhan08/LeetCode/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/1373-maximum-sum-bst-in-binary-tree) |
+| [1376-time-needed-to-inform-all-employees](https://github.com/RanjanChauhan08/LeetCode/tree/master/1376-time-needed-to-inform-all-employees) |
 | [2476-closest-nodes-queries-in-a-binary-search-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/2476-closest-nodes-queries-in-a-binary-search-tree) |
 ## Depth-First Search
 |  |
@@ -56,6 +57,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1192-critical-connections-in-a-network](https://github.com/RanjanChauhan08/LeetCode/tree/master/1192-critical-connections-in-a-network) |
 | [1319-number-of-operations-to-make-network-connected](https://github.com/RanjanChauhan08/LeetCode/tree/master/1319-number-of-operations-to-make-network-connected) |
 | [1373-maximum-sum-bst-in-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/1373-maximum-sum-bst-in-binary-tree) |
+| [1376-time-needed-to-inform-all-employees](https://github.com/RanjanChauhan08/LeetCode/tree/master/1376-time-needed-to-inform-all-employees) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/RanjanChauhan08/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 | [2476-closest-nodes-queries-in-a-binary-search-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/2476-closest-nodes-queries-in-a-binary-search-tree) |
 | [2685-count-the-number-of-complete-components](https://github.com/RanjanChauhan08/LeetCode/tree/master/2685-count-the-number-of-complete-components) |
@@ -86,6 +88,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1091-shortest-path-in-binary-matrix](https://github.com/RanjanChauhan08/LeetCode/tree/master/1091-shortest-path-in-binary-matrix) |
 | [1129-shortest-path-with-alternating-colors](https://github.com/RanjanChauhan08/LeetCode/tree/master/1129-shortest-path-with-alternating-colors) |
 | [1319-number-of-operations-to-make-network-connected](https://github.com/RanjanChauhan08/LeetCode/tree/master/1319-number-of-operations-to-make-network-connected) |
+| [1376-time-needed-to-inform-all-employees](https://github.com/RanjanChauhan08/LeetCode/tree/master/1376-time-needed-to-inform-all-employees) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/RanjanChauhan08/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 | [2685-count-the-number-of-complete-components](https://github.com/RanjanChauhan08/LeetCode/tree/master/2685-count-the-number-of-complete-components) |
 ## Sorting
