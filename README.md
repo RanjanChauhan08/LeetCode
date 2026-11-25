@@ -45,6 +45,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0310-minimum-height-trees](https://github.com/RanjanChauhan08/LeetCode/tree/master/0310-minimum-height-trees) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/RanjanChauhan08/LeetCode/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0332-reconstruct-itinerary](https://github.com/RanjanChauhan08/LeetCode/tree/master/0332-reconstruct-itinerary) |
+| [0399-evaluate-division](https://github.com/RanjanChauhan08/LeetCode/tree/master/0399-evaluate-division) |
 | [0547-number-of-provinces](https://github.com/RanjanChauhan08/LeetCode/tree/master/0547-number-of-provinces) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/RanjanChauhan08/LeetCode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0721-accounts-merge](https://github.com/RanjanChauhan08/LeetCode/tree/master/0721-accounts-merge) |
@@ -78,6 +79,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0310-minimum-height-trees](https://github.com/RanjanChauhan08/LeetCode/tree/master/0310-minimum-height-trees) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/RanjanChauhan08/LeetCode/tree/master/0329-longest-increasing-path-in-a-matrix) |
+| [0399-evaluate-division](https://github.com/RanjanChauhan08/LeetCode/tree/master/0399-evaluate-division) |
 | [0542-01-matrix](https://github.com/RanjanChauhan08/LeetCode/tree/master/0542-01-matrix) |
 | [0547-number-of-provinces](https://github.com/RanjanChauhan08/LeetCode/tree/master/0547-number-of-provinces) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/RanjanChauhan08/LeetCode/tree/master/0653-two-sum-iv-input-is-a-bst) |
@@ -129,6 +131,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/RanjanChauhan08/LeetCode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0332-reconstruct-itinerary](https://github.com/RanjanChauhan08/LeetCode/tree/master/0332-reconstruct-itinerary) |
 | [0344-reverse-string](https://github.com/RanjanChauhan08/LeetCode/tree/master/0344-reverse-string) |
+| [0399-evaluate-division](https://github.com/RanjanChauhan08/LeetCode/tree/master/0399-evaluate-division) |
 | [0721-accounts-merge](https://github.com/RanjanChauhan08/LeetCode/tree/master/0721-accounts-merge) |
 ## Design
 |  |
@@ -170,6 +173,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0200-number-of-islands](https://github.com/RanjanChauhan08/LeetCode/tree/master/0200-number-of-islands) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/RanjanChauhan08/LeetCode/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0332-reconstruct-itinerary](https://github.com/RanjanChauhan08/LeetCode/tree/master/0332-reconstruct-itinerary) |
+| [0399-evaluate-division](https://github.com/RanjanChauhan08/LeetCode/tree/master/0399-evaluate-division) |
 | [0542-01-matrix](https://github.com/RanjanChauhan08/LeetCode/tree/master/0542-01-matrix) |
 | [0721-accounts-merge](https://github.com/RanjanChauhan08/LeetCode/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/RanjanChauhan08/LeetCode/tree/master/0733-flood-fill) |
@@ -216,6 +220,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0130-surrounded-regions](https://github.com/RanjanChauhan08/LeetCode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/RanjanChauhan08/LeetCode/tree/master/0200-number-of-islands) |
+| [0399-evaluate-division](https://github.com/RanjanChauhan08/LeetCode/tree/master/0399-evaluate-division) |
 | [0547-number-of-provinces](https://github.com/RanjanChauhan08/LeetCode/tree/master/0547-number-of-provinces) |
 | [0721-accounts-merge](https://github.com/RanjanChauhan08/LeetCode/tree/master/0721-accounts-merge) |
 | [0785-is-graph-bipartite](https://github.com/RanjanChauhan08/LeetCode/tree/master/0785-is-graph-bipartite) |
@@ -234,6 +239,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0310-minimum-height-trees](https://github.com/RanjanChauhan08/LeetCode/tree/master/0310-minimum-height-trees) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/RanjanChauhan08/LeetCode/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0332-reconstruct-itinerary](https://github.com/RanjanChauhan08/LeetCode/tree/master/0332-reconstruct-itinerary) |
+| [0399-evaluate-division](https://github.com/RanjanChauhan08/LeetCode/tree/master/0399-evaluate-division) |
 | [0547-number-of-provinces](https://github.com/RanjanChauhan08/LeetCode/tree/master/0547-number-of-provinces) |
 | [0785-is-graph-bipartite](https://github.com/RanjanChauhan08/LeetCode/tree/master/0785-is-graph-bipartite) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/RanjanChauhan08/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
@@ -308,6 +314,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Shortest Path
 |  |
 | ------- |
+| [0399-evaluate-division](https://github.com/RanjanChauhan08/LeetCode/tree/master/0399-evaluate-division) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/RanjanChauhan08/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/RanjanChauhan08/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/RanjanChauhan08/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
@@ -319,10 +326,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bellman–Ford Algorithm
 |  |
 | ------- |
+| [0399-evaluate-division](https://github.com/RanjanChauhan08/LeetCode/tree/master/0399-evaluate-division) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/RanjanChauhan08/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 ## Floyd–Warshall Algorithm
 |  |
 | ------- |
+| [0399-evaluate-division](https://github.com/RanjanChauhan08/LeetCode/tree/master/0399-evaluate-division) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/RanjanChauhan08/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 ## Biconnected Component
 |  |
